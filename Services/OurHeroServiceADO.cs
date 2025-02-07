@@ -3,13 +3,17 @@ using OurHeroWebAPI.Models;
 
 namespace OurHeroWebAPI.Services
 {
-    public class OurHeroServiceADO : IOurHeroServiceADO
+    public class OurHeroServiceADO : IDatabaseService
     {
         private readonly string _connectionString;
 
-        public OurHeroServiceADO(IConfiguration configuration)
+        //public OurHeroServiceADO(IConfiguration configuration)
+        //{
+        //    _connectionString = configuration.GetConnectionString("DefaultConnection");
+        //}
+        public OurHeroServiceADO(string connectionString)
         {
-            _connectionString = configuration.GetConnectionString("DefaultConnection");
+            _connectionString = connectionString;
         }
 
         public async Task<List<OurHero>> GetAllHeros(bool? isActive = null)

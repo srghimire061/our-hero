@@ -4,7 +4,7 @@ using OurHeroWebAPI.Models;
 
 namespace OurHeroWebAPI.Services
 {
-    public class OurHeroServiceDB : IOurHeroServiceDB
+    public class OurHeroServiceDB : IDatabaseService
     {
         private readonly OurHeroDbContext _db;
         public OurHeroServiceDB(OurHeroDbContext db)

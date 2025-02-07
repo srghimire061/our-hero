@@ -24,8 +24,7 @@ namespace OurHeroWebAPI
             builder.Services.AddSwaggerGen();
 
             builder.Services.AddSingleton<IOurHeroService, OurHeroService>();
-            builder.Services.AddScoped<IOurHeroServiceDB, OurHeroServiceDB>();
-            builder.Services.AddScoped<IOurHeroServiceADO, OurHeroServiceADO>();
+            builder.Services.AddSingleton<IDatabaseServiceFactory, DatabaseServiceFactory>();
 
             var app = builder.Build();
 
