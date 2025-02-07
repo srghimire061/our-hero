@@ -32,8 +32,8 @@ ScaffoldingReadMe.txt
 # npm package directory
 node_modules/
 # ASP.NET Core configuration files
-appsettings.json
-appsettings.*.json
+# appsettings.json
+# appsettings.*.json
 # .NET Core Debug output
 .vscode/
 .idea/
